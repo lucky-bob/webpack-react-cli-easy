@@ -1,0 +1,29 @@
+{
+  "name": "webpack-react-cli-easy",
+  "version": "1.0.1",
+  "description": "webpack-react-cli-easy",
+  "main": "index.js",
+  "bin": {
+    "wrce": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "chrisbob",
+    "email": "caixgwy@163.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucky-bob/webpack-react-cli-easy"
+  },
+  "license": "ISC",
+  "keywords": ["脚手架", "cli"],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.2.0",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6",
+    "inquirer": "^8.1.5"
+  }
+}
