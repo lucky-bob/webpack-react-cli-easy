@@ -1,18 +1,22 @@
-#! /usr/bin/env node
+#! /usr/bin/env node --experimental-json-modules
 
-const chalk = require("chalk");
-const { program } = require("commander");
+import chalk from "chalk";
+import commander from "commander";
+import createMethod from "../lib/create.js";
+import pkgJSON from "../package.json"
 
-console.log(chalk.green("webpack-react-cli-easy start"));
+const { program } = commander;
+
+console.log(chalk.green("webpack-react-cli-easy start..."));
 
 program
   .command("create <app-name>")
   .description("create a new project")
   .action((name, options) => {
-    require("../lib/create.js")(name, options);
+    createMethod(name, options);
   });
 
 // 配置版本号信息
-program.version(chalk.green(`v${require("../package.json").version}`), "-v, --vision");
+program.version(chalk.green(`v${pkgJSON.version}`), "-v, --vision");
 
 program.parse(process.argv);
